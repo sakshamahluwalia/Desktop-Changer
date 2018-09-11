@@ -15,7 +15,6 @@ A computer with python installed.
 
 Open the terminal in the cloned folder. 
 ```
-. install.sh
 python3 script.py
 ```
 
