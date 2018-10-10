@@ -1,8 +1,10 @@
 import random, requests, shutil, os, time
 from bs4 import BeautifulSoup
 
+page_number = random.randint(1, 9)
+
 # Request the page
-req = requests.get("https://workhardanywhere.com/wallpapers/")
+req = requests.get("https://workhardanywhere.com/wallpapers/page/{}/".format(page_number))
 content = req.content
 
 # Create an instance of BeautifulSoup
@@ -17,12 +19,12 @@ index = random.randint(2, 30)
 
 wallpaper = sources[index]
 data = requests.get(wallpaper, stream=True)
-with open('wallpaper.jpg', 'wb') as out_file:
+with open('//home/ahlus/Wallpapers/wallpaper.jpg', 'wb') as out_file:
     shutil.copyfileobj(data.raw, out_file)
 
 del data
 
-os.system("gsettings set org.gnome.desktop.background picture-uri file:///home/ahlus/Desktop/wallpaper.jpg")
+os.system("gsettings set org.gnome.desktop.background picture-uri file:///home/ahlus/Wallpapers/wallpaper.jpg")
 time.sleep(1)
-os.system("rm wallpaper.jpg")
+# os.system("rm wallpaper.jpg")
 print ("enjoy")
