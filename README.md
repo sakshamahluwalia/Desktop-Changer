@@ -2,7 +2,7 @@
   <img src ="http://www.icym.edu.my/v13/images/python-developers_b02fb.png" />
 </div>
 
-# Update 21.02.202
+# Update 21.02.2020
 This tool is no longer usable. The website seems to blocking requests made by the, 'requests' module in python.
 
 # Desktop-Changer
